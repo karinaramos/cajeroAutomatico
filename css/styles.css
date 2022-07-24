@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.box-content {
+  background: url('../img/pexels-gabriel-ventura-6149431.jpg') center no-repeat;
+  background-size: cover;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.box-logo {
+  align-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.logo-bank {
+  max-width: 120px;
+}
+
+.box-form {
+  background: #fff;
+  border-radius: 12px;
+}
+.title-form {
+  background: #008b82;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}

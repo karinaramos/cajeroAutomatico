@@ -6,10 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cajero Automatico</title>
   <link rel="stylesheet" href="css/bootstrap.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  
+  <div class="container align-items-center">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-6 col-sm-8 col-10">
+        <div class="box-content px-5 py-5">
+          <div class="box-logo">
+            <img src="img/logo-bank.png" class="img-fluid logo-bank" alt="">
+          </div>
+
+          <div class="box-form mt-5">
+            <h3 class="text-center py-4 title-form text-white">CAJERO AUTOMÁTICO</h3>
+            <div class="screen-initial">
+              <form class="p-4 needs-validation" novalidate>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="txtUsername" placeholder="Mali" required>
+                  <label for="txtUsername">Nombre de Usuario</label>
+                  <div class="invalid-feedback">Ingresa tu usuario</div>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
+                  <label for="txtPassword">Contraseña</label>
+                  <div class="invalid-feedback">Ingresa tu contraseña</div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                  <button class="btn btn-success btn-submit" type="submit" onclick="Ingresar()">INGRESAR</button>
+                </div>
+              </form>
+            </div>
+            <div class="screen-options d-none">
+              <div class="d-grid gap-3 p-4">
+                <button class="btn btn-primary" type="button">Consultar saldo</button>
+                <button class="btn btn-primary" type="button">Ingresar monto</button>
+                <button class="btn btn-primary" type="button">Retirar monto</button>
+              </div>
+            </div>
+            <div class="screen-query d-none">
+              <p id="show-amount"></p>
+            </div>
+            <div class="screen-deposit d-none">
+              <form class="p-4 needs-validation" novalidate>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="txtAmountDeposit" placeholder="Monto a depositar" required>
+                  <label for="txtAmountDeposit">Monto a depositar</label>
+                  <div class="invalid-feedback">Monto inválido</div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                  <button class="btn btn-success btn-submit" type="submit" onclick="Depositar()">DEPOSITAR</button>
+                </div>
+              </form>
+            </div>
+            <div class="screen-withdraw d-none">
+              <form class="p-4 needs-validation" novalidate>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="txtAmountDeposit" placeholder="Monto a retirar" required>
+                  <label for="txtAmountDeposit">Monto a retirar</label>
+                  <div class="invalid-feedback">Monto inválido</div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                  <button class="btn btn-success btn-submit" type="submit" onclick="Retirar()">RETIRAR</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>
